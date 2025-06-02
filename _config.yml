@@ -1,0 +1,51 @@
+# Site settings
+title: Matías Battaglia
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Matías Battaglia's blog! Here I dive deep and provide my own opinion into AI, Cloud and everything in tech.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mbattaglia.github.io"
+
+author:
+  name: Matías Battaglia
+
+# Social media usernames (remove or comment out any you don't use)
+github_username: mbattaglia
+linkedin_username: mbattagliaromano
+
+# Build settings
+markdown: kramdown
+remote_theme: jekyll/minima
+minima:
+  skin: dark
+  show_excerpts: true
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  talks:
+    output: true
+    permalink: /talks/:name/
+
+# Header pages - these will appear in the navigation
+header_pages:
+  - about.md
+  - talks.md
+
+sass:
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
