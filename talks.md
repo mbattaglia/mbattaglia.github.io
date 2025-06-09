@@ -16,13 +16,13 @@ Here are some of the talks and presentations I've given at conferences, meetups,
 - **Date**: June 11th, 2025
 - **Location**: IFEMA, Madrid, Spain
 
+### **"IA en moda: Revolución en producción visual (Quantization and Optimization for image generation models)"**
+- **Description**: In this talk I will dive deep into quantization for image generation models and will share best practices to scale image generation workloads at scale.
+- **Resources**: [link]({% link _talks/aws-summit-2025-genai-quantization.md %})
+
 ### **"Seguridad en GenAI: Estrategias y buenas prácticas"**
 - **Description**: In this talk will cover the unique security challenges of GenAI workloads and present a multilayered strategy that addresses data protection, model security, prompt injection attacks, and compliance requirements.
 - **Resources**: [link]({% link _talks/aws-summit-2025-genai-security.md %})
-
-### **"IA en moda: Revolución en producción visual"**
-- **Description**: In this talk I will dive deep into quantization for image generation models and will share best practices to scale image generation workloads at scale.
-- **Resources**: [link]({% link _talks/aws-summit-2025-genai-quantization.md %})
 
 ---
 
