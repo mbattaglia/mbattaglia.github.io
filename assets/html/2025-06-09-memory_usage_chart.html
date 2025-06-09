@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUX.1 Memory Usage Comparison</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2d3748;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header p {
+            color: #718096;
+            margin: 0;
+            font-size: 16px;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin-bottom: 30px;
+        }
+        .custom-legend {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 13px;
+        }
+        .legend-marker {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        .multi-color-marker {
+            background: conic-gradient(
+                rgba(229, 62, 62, 1) 0deg 72deg,
+                rgba(66, 153, 225, 1) 72deg 216deg,
+                rgba(56, 161, 105, 1) 216deg 360deg
+            );
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px rgba(160, 174, 192, 0.3);
+        }
+        .line-marker {
+            background: rgba(128, 90, 213, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FLUX.1 Dev Memory Usage Optimization</h1>
+            <p>Comparison of VRAM usage across different optimization techniques</p>
+        </div>
+
+        <div class="custom-legend">
+            <div class="legend-item">
+                <div class="legend-marker multi-color-marker"></div>
+                <span>VRAM Usage (GB)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-marker line-marker"></div>
+                <span>Generation Time (seconds)</span>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="memoryChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('memoryChart').getContext('2d');
+        
+        const data = {
+            labels: [
+                'Full Precision',
+                'Model CPU Offload', 
+                'NF4 Quantization',
+                'NF4 + CPU Offload',
+                'Sequential CPU Offload'
+            ],
+            datasets: [{
+                label: 'VRAM Usage (GB)',
+                data: [39.27, 24, 19.05, 8.5, 2],
+                backgroundColor: [
+                    'rgba(229, 62, 62, 0.8)',
+                    'rgba(66, 153, 225, 0.8)',
+                    'rgba(66, 153, 225, 0.8)',
+                    'rgba(56, 161, 105, 0.8)',
+                    'rgba(56, 161, 105, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(229, 62, 62, 1)',
+                    'rgba(66, 153, 225, 1)',
+                    'rgba(66, 153, 225, 1)',
+                    'rgba(56, 161, 105, 1)',
+                    'rgba(56, 161, 105, 1)'
+                ],
+                borderWidth: 2,
+                borderRadius: 6,
+                borderSkipped: false
+            }, {
+                label: 'Generation Time (seconds)',
+                data: [26, 56, 28, 39, 300],
+                backgroundColor: 'rgba(128, 90, 213, 0.6)',
+                borderColor: 'rgba(128, 90, 213, 1)',
+                borderWidth: 2,
+                type: 'line',
+                yAxisID: 'y1',
+                tension: 0.4,
+                pointBackgroundColor: 'rgba(128, 90, 213, 1)',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 6
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 12,
+                                weight: '600'
+                            },
+                            color: '#4a5568'
+                        }
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'VRAM Usage (GB)',
+                            font: {
+                                size: 14,
+                                weight: '600'
+                            },
+                            color: '#2d3748'
+                        },
+                        grid: {
+                            color: 'rgba(160, 174, 192, 0.2)'
+                        },
+                        ticks: {
+                            font: {
+                                size: 12
+                            },
+                            color: '#4a5568'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Generation Time (seconds)',
+                            font: {
+                                size: 14,
+                                weight: '600'
+                            },
+                            color: '#2d3748'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                        ticks: {
+                            font: {
+                                size: 12
+                            },
+                            color: '#4a5568'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // Hide default legend since we're using custom
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderWidth: 1,
+                        cornerRadius: 8,
+                        displayColors: true,
+                        callbacks: {
+                            label: function(context) {
+                                if (context.datasetIndex === 0) {
+                                    return `VRAM: ${context.parsed.y} GB`;
+                                } else {
+                                    return `Time: ${context.parsed.y} seconds`;
+                                }
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 1000,
+                    easing: 'easeInOutQuart'
+                }
+            }
+        });
+    </script>
+    <script>
+        function sendHeight() {
+            var height = document.body.scrollHeight;
+            parent.postMessage({ type: "setHeight", height: height }, "*");
+        }
+        window.onload = sendHeight;
+        window.onresize = sendHeight;
+    </script>
+</body>
+</html>
