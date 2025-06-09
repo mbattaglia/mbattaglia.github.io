@@ -16,7 +16,7 @@ Over the past few months, I've been exploring how to optimize inference for imag
 
 In this post, I'll discuss some inference tricks and quantization techniques, courtesy of the amazing work done by Hugging Face in the Diffusers and bitsandbytes libraries.
 
-> I will be covering some of this topics in an upcoming conference talk in the AWS Summit Madrid 2025. The session ID is **AIM306**. Hope to see you there1
+> I will be covering some of this topics in an upcoming conference talk in the AWS Summit Madrid 2025. The session ID is **AIM306**. Hope to see you there!
 
 ## TL;DR: Quick Start Guide
 
