@@ -5,14 +5,13 @@ permalink: /talks/
 ---
 Here are some of the talks and presentations I've given at conferences, meetups, and other events.
 
-# Upcoming Talks
+# Past Talks
 
----
+## 2025
 
 ## AWS Summit Madrid 2025
 
 - **Language**: Spanish
-- **Registration link**: [link](https://pages.awscloud.com/aws-summit-madrid-2025-registration.html)
 - **Date**: June 11th, 2025
 - **Location**: IFEMA, Madrid, Spain
 
@@ -24,11 +23,6 @@ Here are some of the talks and presentations I've given at conferences, meetups,
 - **Description**: In this talk will cover the unique security challenges of GenAI workloads and present a multilayered strategy that addresses data protection, model security, prompt injection attacks, and compliance requirements.
 - **Resources**: [link]({% link _talks/aws-summit-2025-genai-security.md %})
 
----
-
-# Past Talks
-
-## 2025
 
 ### "Design principles for Agentic AI"
 - **Event**: AI Meetup - The Information Lab
