@@ -4,6 +4,9 @@ title:  "Building a RAG from scratch"
 author: Matías Battaglia
 excerpt: |
   <div class="excerpt-container">
+    <div class="excerpt-image">
+      <img src="/assets/images/posts/2025-08-25-similarity-search.gif" alt="Similarity Search in RAG">
+    </div>
     <div class="excerpt-text">
         Learn to build a complete Retrieval Augmented Generation (RAG) system from scratch using Python. This hands-on guide covers everything from document chunking and embeddings to similarity search and LLM integration, with interactive 3D visualizations showing how semantic search actually works under the hood.
     </div>
