@@ -17,6 +17,8 @@ Structured output from LLMs is critical for production applications, yet it's on
 
 Let's explore different approaches to reliably getting structured output from LLMs.
 
+![Structured output](/assets/images/posts/2025-09-11-structured-output.gif)
+
 ## What do I mean by "using structured output with LLMs"?
 
 By this I mean defining a JSON model or schema for how outputs from LLMs should look like, and then coercing the LLM to follow it. It also covers the mechanisms you can use to validate whether the LLM did it, and even casting them if needed.
