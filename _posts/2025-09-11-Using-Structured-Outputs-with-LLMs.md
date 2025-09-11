@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a RAG from scratch"
+title:  "Using Structured Output with LLMs"
 author: Matías Battaglia
 excerpt: |
   <div class="excerpt-container">
