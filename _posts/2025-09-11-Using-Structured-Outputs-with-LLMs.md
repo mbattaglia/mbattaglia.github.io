@@ -13,7 +13,7 @@ excerpt: |
   </div>
 ---
 
-Structured output from LLMs is critical for production applications, yet it's one of those topics that seems simple in proof-of-concept mode but becomes suddently becomes a problem at scale.
+Structured output from LLMs is critical for production applications, yet it's one of those topics that seems simple in proof-of-concept mode but suddenly becomes a problem at scale.
 
 Let's explore different approaches to reliably getting structured output from LLMs.
 
