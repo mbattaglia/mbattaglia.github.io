@@ -29,7 +29,7 @@ You can also view it as applying strong typing to LLM outputs.
 
 The short answer: **downstream integrations**. If you are planning to integrate the LLM's output with any other system, most likely you will want to have control over the structure and the fields contained in the output.
 
-Have you ever prompted an LLM to answer only with a JSON and in response you got those dreaded markdown code ticks (` ```json `)? Without structured outputs, you're essentially playing a game of chance. You might get perfect JSON 99% of the time, but that 1% failure rate will break your system.
+Have you ever prompted an LLM to answer only with a JSON and in response you got those dreaded markdown code ticks (` \```json `)? Without structured outputs, you're essentially playing a game of chance. You might get perfect JSON 99% of the time, but that 1% failure rate will break your system.
 
 ## How does it work?
 
