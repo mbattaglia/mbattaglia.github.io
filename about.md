@@ -8,7 +8,7 @@ permalink: /about/
 
 Hey there! I’m Matías Battaglia - a proud dad, tech enthusiast, and coffee nerd based in Madrid, Spain 🇪🇸. I'm passionate about many things: AI, emerging tech trends, fitness, playing the drums, and more!
 
-I work as a Senior Solutions Architect at AWS ☁️, where I help organizations and individuals leverage technology to unlock real value - whether through AI, the cloud, or beyond.
+I work as a Senior Forward Deployed AI Engineer at DoiT, where I help organizations and individuals leverage technology to unlock real value - whether through AI, the cloud, or beyond.
 
 When I’m not working, you’ll find me enjoying quality time with my family 👨‍👩‍👦, exercising 💪, coding, writing, diving into the world of specialty coffee ☕, or fine-tuning my training routines 💪.
 
