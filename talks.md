@@ -9,20 +9,25 @@ Here are some of the talks and presentations I've given at conferences, meetups,
 
 ## 2025
 
-## AWS Summit Madrid 2025
+### "Beyond the PoC: how to bring AI agents to production with Amazon Bedrock AgentCore"
+- **Event**: AWS Generative AI Day
+- **Date**: November 3rd, 2025
+- **Location**: AWS Offices in Madrid, Spain
+- **Description**: Agentic AI is transforming the way we automate complex tasks, but taking an agent from the proof-of-concept stage to production presents unique challenges. In this session, I explained the path from prototyping to robust and scalable agentic systems in real-world environments, guided by the Amazon Bedrock AgentCore service.
 
-- **Language**: Spanish
+### "IA en moda: Revolución en producción visual (Quantization and Optimization for image generation models)"
+- **Event**: AWS Summit Madrid 2025
 - **Date**: June 11th, 2025
 - **Location**: IFEMA, Madrid, Spain
-
-### **"IA en moda: Revolución en producción visual (Quantization and Optimization for image generation models)"**
 - **Description**: In this talk I will dive deep into quantization for image generation models and will share best practices to scale image generation workloads at scale.
 - **Resources**: [link]({% link _talks/aws-summit-2025-genai-quantization.md %})
 
 ### **"Seguridad en GenAI: Estrategias y buenas prácticas"**
+- **Event**: AWS Summit Madrid 2025
+- **Date**: June 11th, 2025
+- **Location**: IFEMA, Madrid, Spain
 - **Description**: In this talk will cover the unique security challenges of GenAI workloads and present a multilayered strategy that addresses data protection, model security, prompt injection attacks, and compliance requirements.
 - **Resources**: [link]({% link _talks/aws-summit-2025-genai-security.md %})
-
 
 ### "Design principles for Agentic AI"
 - **Event**: AI Meetup - The Information Lab
@@ -35,11 +40,11 @@ Here are some of the talks and presentations I've given at conferences, meetups,
 
 ---
 
-### "Agentes Inteligentes: Construyendo el Futuro de la Automatización"
+### "Intelligent Agents: Building the Future of Automation"
 - **Language**: Spanish
 - **Event**: AWS Generative AI Day
 - **Date**: March 25th, 2025
-- **Location**: Madrid, Spain
+- **Location**: AWS Offices in Madrid, Spain
 - **Description**: I spoke about AI agents and design principles. Shared a couple of the patterns that I believe are most effective and useful to implement.
 - **Materials**: 
   - [Blog Post]({% post_url 2025-02-11-What-is-the-deal-with-Agentic-AI-systems %})
@@ -47,7 +52,7 @@ Here are some of the talks and presentations I've given at conferences, meetups,
 
 ---
 
-### Mesa redonda: "Innovando con IA"
+### Round table: Innovating with AI
 - **Language**: Spanish
 - **Event**: Cisco Partner Executive Exchange II
 - **Date**: February 6th, 2025
