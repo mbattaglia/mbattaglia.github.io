@@ -8,7 +8,7 @@ excerpt: |
       <img src="/assets/images/posts/transformers/transformers-faster.gif" alt="An animation explaining the workflow of a transformer.">
     </div>
     <div class="excerpt-text">
-        A deep dive into how transformers process text, starting with the first step: tokenization. We cover vocabularies, the tradeoffs of vocabulary size, special tokens, and edge cases like anomalous tokens. Part of a series explaining transformers.
+        A deep dive into how transformers process text, starting with the first step: tokenization. We cover vocabularies, the tradeoffs of vocabulary size, special tokens, and edge cases like anomalous tokens. This is the first post in a series explaining transformers.
     </div>
   </div>
 ---
