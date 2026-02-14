@@ -46,7 +46,9 @@ At a conceptual level, a transformer is composed of the following blocks:
 
 Or, if you prefer an animation:
 
-![Transformers pipeline animation](/assets/images/posts/transformers/transformers-pipeline.mp4)
+<video autoplay loop muted playsinline width="100%">
+  <source src="/assets/images/posts/transformers/transformers-pipeline.mp4" type="video/mp4">
+</video>
 
 Let's walk through each one. In this post, I will focus on tokenization, and the remaining blocks will be covered in subsequent posts.
 
@@ -55,7 +57,9 @@ Since transformers don't work with text, there needs to be a way to convert the 
 
 Tokens can be common words, word fragments, punctuation, emojis, or special tokens like end-of-sequence, or tool-use markers. For example, "transformers" might become `["trans", "form", "ers"]`. Usually, different model providers or labs have different tokenizers, and different generations of models may have different tokenizers as well. 
 
-![Tokenization animation](/assets/images/posts/transformers/tokenization.mp4)
+<video autoplay loop muted playsinline width="100%">
+  <source src="/assets/images/posts/transformers/tokenization.mp4" type="video/mp4">
+</video>
 
 The result of tokenization is an array of integers, where each integer is an index into the vocabulary:
 
