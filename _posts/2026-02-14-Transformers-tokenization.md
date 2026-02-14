@@ -12,7 +12,6 @@ excerpt: |
     </div>
   </div>
 ---
-# Transformers from First Principles: Part 1 - Tokenization
 
 When using tools like Claude Code, have you noticed how important it is to keep the context window clean of irrelevant data and focused on a specific task? Empirically, you quickly learn that proper context management not only improves performance, it also lowers latency and saves on tokens.
 
