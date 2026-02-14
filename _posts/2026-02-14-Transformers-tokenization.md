@@ -27,7 +27,7 @@ As a heads up, in this post series I will focus on the specific transformer vari
 
 Transformers are **autoregressive**, meaning they generate output one token at a time, feeding each prediction back into the input to generate the next one. This loop continues until the model produces a stop token or reaches a configured maximum length.
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline width="100%">
   <source src="/assets/images/posts/transformers/transformers.mp4" type="video/mp4">
 </video>
 
