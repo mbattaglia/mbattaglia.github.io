@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Transformers from First Principles: Part 1 - Tokenization"
+title:  "Transformers from first principles: Part 1 - Tokenization"
 author: Matías Battaglia
 excerpt: |
   <div class="excerpt-container">
