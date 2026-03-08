@@ -92,7 +92,7 @@ This element-wise addition produces a single vector per position that encodes bo
 You might wonder why simple addition works here rather than, say, concatenation. Addition works because the embedding space is high-dimensional, giving the model plenty of room to learn complementary subspaces for identity and position information. The two signals don't destructively interfere because they effectively occupy different regions of the space.
 
 <video autoplay loop muted playsinline width="100%">
-  <source src="/assets/images/posts/2026-02-14-transformers/embedding.mp4" type="video/mp4">
+  <source src="/assets/images/posts/transformers/embedding.mp4" type="video/mp4">
 </video>
 
 ### Embeddings Input and Output
